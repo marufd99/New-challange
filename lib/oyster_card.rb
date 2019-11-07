@@ -8,4 +8,7 @@ def initialize
    @balance += amount
    fail "Maximum balance of #{MAXIMUM_BALANCE} reached" if (@balance += amount > 90)
  end
+ def deduct(amount)
+   @balance += amount
+ end
 end

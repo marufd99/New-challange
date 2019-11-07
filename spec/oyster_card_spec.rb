@@ -15,5 +15,7 @@ describe OysterCard do
   it 'expect to raise an error if over 90' do
   expect {subject.top_up(95).to raise_error ("Maximum limit reached")}
   end
-
+it 'expect to deduct money from oystercard' do
+  expect {(subject).to respond_to(:deduct).with(1).argument}
+end
 end
